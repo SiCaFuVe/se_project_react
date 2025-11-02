@@ -1,19 +1,19 @@
-import "./Header.css";
+import "./Header";
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/avatar.png";
 
 function Header() {
   return (
-    <Header className="header">
+    <header className="header">
       <img className="header__logo" src={logo} />
-      <p className="header__date-and-location"> DATE, NYC</p>
+      <p className="header__date-and-location"> DATE, LOCATION </p>
       <button className="header__add-clothes-btn"> + Add Clothes</button>
       HEADER
       <div className="header__user-container">
         <p className="header__username"> Terrence Tegegne </p>
         <img src={avatar} alt="Terrence Tegegne" className="header__avatar" />
       </div>
-    </Header>
+    </header>
   );
 }
 
