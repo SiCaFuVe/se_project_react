@@ -7,6 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
+}
+
+.modal_opened {
+  visibility: visible;
 }
 
 .modal__title {
@@ -22,9 +27,23 @@
   background-color: #fff;
   position: relative;
   padding: 28px 28px 36px;
+  max-width: 496px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  display: block;
+}
+
+.modal__radio-buttons {
+  border: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
