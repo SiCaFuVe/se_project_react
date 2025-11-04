@@ -1,3 +1,8 @@
 .modal {
   font-family: "CabinetGrotesk-Medium", sans-serif;
+  border-radius: 20px;
+}
+
+.modal__content_type_image {
+  object-fit: cover;
 }

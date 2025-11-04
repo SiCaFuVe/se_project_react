@@ -1,4 +1,4 @@
-const getWeather = ({ latitude, longitude }, APIkey) => {
+export const getWeather = ({ latitude, longitude }, APIkey) => {
   return fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
   ).then((res) => {
@@ -18,7 +18,7 @@ export const filterWeatherData = (data) => {
   return result;
 };
 
-const getWeatherType = (temperature) => {
+export const getWeatherType = (temperature) => {
   if (temperature > 86) {
     return "hot";
   } else if (temperature >= 66 && temperature < 86) {

@@ -15,6 +15,7 @@
 
 .header__date-and-location {
   margin: 0;
+  left: 113px;
   font-size: 20px;
 }
 
@@ -22,7 +23,6 @@
   margin: 0 20px 0 auto;
   border: none;
   font-size: 20px;
-  background-color: none;
 }
 
 .header__user-container {
