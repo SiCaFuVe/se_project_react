@@ -2,18 +2,27 @@
   display: flex;
   align-items: center;
   padding: 32px 0 28px;
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "CabinetGrotesk-Bold", sans-serif;
 }
 
 .header__logo {
   margin-right: 24p;
+  width: 89px;
+  height: 40px;
 }
 
 .header__date-and-location {
   margin: 0;
+  font-size: 20px;
 }
 
 .header__add-clothes-btn {
   margin: 0 20px 0 auto;
+  border: none;
+  font-size: 20px;
+  background-color: none;
 }
 
 .header__user-container {
@@ -24,4 +33,5 @@
 
 .header__username {
   margin: 0;
+  font-size: 20px;
 }

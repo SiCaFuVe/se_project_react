@@ -20,7 +20,7 @@ function App() {
     setActiveModal("");
   };
 
-  const handleCardClick = () => {
+  const handleCardClick = (card) => {
     setActiveModal("preview");
     setSelectedCard(card);
   };
@@ -29,7 +29,7 @@ function App() {
     <div className="page">
       <div className="page__content">
         <Header handleAddClick={handleAddClick} />
-        <Main weatherData={weatherData} />
+        <Main weatherData={weatherData} handleCardClick={handleCardClick} />
         <Footer />
       </div>
       <ModalWithForm

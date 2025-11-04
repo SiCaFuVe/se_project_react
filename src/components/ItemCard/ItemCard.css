@@ -1,16 +1,27 @@
 .card {
   width: 323px;
+  height: 326px;
   position: relative;
   display: flex;
   justify-content: center;
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .card__name {
   position: absolute;
   top: 15px;
   margin: 0;
+  font-family: "CabinetGrotesk-Medium", sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .card__image {
   width: 100%;
+  border-radius: 8px;
+}
+
+.cards__text {
+  font-family: "CabinetGrotesk-Bold", sans-serif;
 }
