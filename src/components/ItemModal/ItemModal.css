@@ -1,8 +1,43 @@
 .modal {
-  font-family: "CabinetGrotesk-Medium", sans-serif;
+  font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
   border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 .modal__content_type_image {
+  padding: 0;
+  border: none;
+  height: 610px;
+  width: 498px;
+  top: 106px;
+  background-color: white;
+}
+
+.modal__image {
+  height: 498px;
+  width: 100%;
   object-fit: cover;
+  padding: 0;
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.modal__footer {
+  font-size: 20px;
+  font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  background-color: white;
+}
+
+.modal__caption {
+  margin-top: 10px;
+  padding: 0%;
+}
+
+.modal__weather {
+  margin: 15px 0;
+  font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }

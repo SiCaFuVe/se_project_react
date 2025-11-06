@@ -4,11 +4,11 @@
   padding: 32px 0 28px;
   font-size: 20px;
   line-height: 24px;
-  font-family: "CabinetGrotesk-Bold", sans-serif;
+  font-family: "CabinetGrotesk-Bold", Arial, Helvetica, sans-serif;
 }
 
 .header__logo {
-  margin-right: 24p;
+  margin-right: 24px;
   width: 89px;
   height: 40px;
 }
