@@ -1,15 +1,20 @@
 import "../WeatherCard/WeatherCard.css";
-import sunandcloud from "../../assets/sunandcloud.png";
+import { weatherOptions } from "../../utils/constants";
 
 function WeatherCard({ weatherData }) {
+  const filteredOptions = weatherOptions.filter((options) => {
+    return (
+      options.day === weatherData.isDay &&
+      options.condition === weatherData.condition
+    );
+  });
+
+  const weatherOptionUrl = filteredOptions[0]?.url;
+
   return (
     <section className="weather-card">
       <p className="weather-card__temp"> {weatherData.temp.F} &deg; F</p>
-      <img
-        src={sunandcloud}
-        alt="sun and cloud"
-        className="weather-card__image"
-      />
+      <img src={weatherOptionUrl} alt="" className="weather-card__image" />
     </section>
   );
 }
