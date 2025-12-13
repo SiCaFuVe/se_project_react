@@ -1,11 +1,12 @@
 import "./Footer.css";
 
-function Footer({ author, year }) {
-  return;
-  <div className="footer__content">
-    {author}
-    <p className="footer__year"> {year} </p>
-  </div>;
+function Footer({}) {
+  return (
+    <div className="footer__content">
+      {"Developed by Carolina Fuentes"}
+      <p className="footer__year"> {2025} </p>
+    </div>
+  );
 }
 
 export default Footer;

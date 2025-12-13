@@ -1,7 +1,15 @@
 .footer {
   width: 1358px;
   height: 20px;
+}
+
+.footer__content {
   font-size: 16px;
   display: flex;
-  align-items: center;
+  left: 40px;
+  line-height: 20px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  justify-content: space-between;
+  margin-top: 350px;
+  margin-left: 40px;
 }
