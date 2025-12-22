@@ -5,7 +5,7 @@ export const getWeather = ({ latitude, longitude }, APIkey) => {
     if (res.ok) {
       return res.json();
     } else {
-      return Promise.reject(`Error: ${res.status}`);
+      throw new Error(`Error: ${res.status}`);
     }
   });
 };
