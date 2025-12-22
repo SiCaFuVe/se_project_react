@@ -8,7 +8,6 @@ function WeatherCard({ weatherData }) {
       options.condition === weatherData.condition
     );
   });
-  console.log(weatherData);
 
   let weatherOption;
   if (filteredOptions.length === 0) {

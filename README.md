@@ -1,8 +1,21 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sprint 10 project.
 
-Currently, two official plugins are available:
+We created an App that tracks the weather and provides images of the clothing necessary for the current temperature.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tech Stack
+
+- React
+- Vite
+- CSS
+- OpenWeather API
+
+### Features
+
+- Real-time weather data
+- Clothing recommendations
+- Responsive design
+
+[Visit_Project_10] (https://github.com/SiCaFuVe/se_project_react.git)
+![Poject_10](<Screenshot 2025-12-16 at 14.52.19.png>)

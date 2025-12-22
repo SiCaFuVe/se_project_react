@@ -7,7 +7,7 @@ function ModalWithForm({ children, title, buttonText, activeModal, onClose }) {
         <h2 className="modal__title"> {title} </h2>
         <button
           onClick={onClose}
-          typee="button"
+          type="button"
           className="modal__close"
         ></button>
         <form className="modal__form">
