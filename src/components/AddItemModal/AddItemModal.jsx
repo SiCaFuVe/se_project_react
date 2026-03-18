@@ -26,8 +26,9 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
         Name{" "}
         <input
           type="text"
-          className="modal__input"
-          id="name"
+          className="modal__input modal__input_type_card-name"
+          name="name"
+          id="clothing-name"
           placeholder="Name"
           required
           minLength="1"
@@ -35,6 +36,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
           value={values.name}
           onChange={handleChange}
         />
+        <span className="modal__error" id="place-name-error" />
       </label>
       <label htmlFor="imageUrl" className="modal__label">
         Image{" "}
@@ -42,8 +44,9 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
           type="url"
           name="link"
           className="modal__input modal__input_type_url"
-          id="imageUrl"
+          id="clothing-url"
           placeholder="Image URL"
+          required
           value={values.link}
           onChange={handleChange}
         />

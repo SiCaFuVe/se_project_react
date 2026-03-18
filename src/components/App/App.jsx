@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./App.css";
@@ -47,8 +48,22 @@ function App() {
   };
 
   const onAddItem = (inputValues) => {
-    setClothingItems([...clothingItems, inputValues]);
-    closeAllModals;
+    //call the fetch function
+    //then((data)=> {})... inclludes all the stuff bellow
+    const newCardData = {
+      name: inputValues.name,
+      link: inputValues.link,
+      weather: inputValues.weatherType,
+    };
+    // dontt use new card data
+    // the id will be included in the response data
+    setClothingItems([...clothingItems, newCardData]);
+    closeAllModals();
+    // catch()
+  };
+
+  const closeAllModals = () => {
+    setActiveModal("");
   };
 
   useEffect(() => {
@@ -67,22 +82,30 @@ function App() {
       <div className="page">
         <div className="page__content">
           <Header handleAddClick={handleAddClick} weatherData={weatherData} />
-          <Main
-            weatherData={weatherData}
-            clothingItems={clothingItems}
-            handleCardClick={handleCardClick}
-          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  weatherData={weatherData}
+                  clothingItems={clothingItems}
+                  handleCardClick={handleCardClick}
+                />
+              }
+            />
+            <Route path="/profile" element={<p>PROFILE</p>} />
+          </Routes>
           <Footer />
         </div>
         <AddItemModal
-          onClose={closeActiveModal}
+          onClose={closeAllModals}
           isOpen={activeModal === "add-garment" && "modal_opened"}
           onAddItem={onAddItem}
         />
         <ItemModal
           activeModal={activeModal}
           card={selectedCard}
-          onClose={closeActiveModal}
+          onClose={closeAllModals}
         />
       </div>
     </currentTemperatureUnitContext.Provider>
