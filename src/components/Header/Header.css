@@ -35,3 +35,7 @@
   margin: 0;
   font-size: 20px;
 }
+.header__nav-link {
+  text-decoration: none;
+  color: inherit;
+}

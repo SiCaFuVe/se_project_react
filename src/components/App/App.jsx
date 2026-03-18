@@ -7,6 +7,7 @@ import {
   APIkey,
   defaultClothingItems,
 } from "../../utils/constants";
+import Profile from "../Profile/Profile";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
@@ -93,7 +94,15 @@ function App() {
                 />
               }
             />
-            <Route path="/profile" element={<p>PROFILE</p>} />
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
+                />
+              }
+            />
           </Routes>
           <Footer />
         </div>

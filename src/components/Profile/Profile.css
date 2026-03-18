@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.clothes-section__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 283px);
+  grid-template-rows: repeat(auto-fit, 283px);
+  padding: 0;
+}
