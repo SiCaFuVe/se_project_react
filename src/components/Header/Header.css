@@ -23,6 +23,7 @@
   margin: 0 20px 0 auto;
   border: none;
   font-size: 20px;
+  background: rgba(243, 243, 243, 1);
 }
 
 .header__user-container {

@@ -1,7 +1,7 @@
 import "./Profile.css";
 import ClothesSection from "../ClothesSection/ClothesSection";
 import SideBar from "../SideBar/SideBar";
-import avatar from "../../assets/avatar.png";
+import avatarDefault from "../../assets/avatarDefault.png";
 
 export default function Profile({ clothingItems, handleCardClick }) {
   return (
