@@ -13,6 +13,10 @@
   height: 40px;
 }
 
+.header__logo-ink {
+  display: flex;
+}
+
 .header__date-and-location {
   margin: 0;
   left: 113px;

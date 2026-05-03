@@ -2,7 +2,7 @@ import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-import ToggleSwicth from "../ToggleSwitch/ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import logo from "../../assets/logo.svg";
 import avatar from "../../assets/avatar.png";
 
@@ -14,11 +14,13 @@ function Header({ handleAddClick, weatherData }) {
 
   return (
     <header className="header">
-      <img className="header__logo" src={logo} alt="WTWR logo" />
+      <NavLink to="/" className="heaader__logo-link">
+        <img className="header__logo" src={logo} alt="WTWR logo" />
+      </NavLink>
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
-      <ToggleSwicth />
+      <ToggleSwitch />
       <button
         onClick={handleAddClick}
         type="button"
