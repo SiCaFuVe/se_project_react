@@ -11,7 +11,7 @@ function ModalWithForm({
   onSubmit,
 }) {
   return (
-    <div className={`modal modal_type_${name} ${isOpen}`}>
+    <div className={`modal modal_type_${name} ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content">
         <h2 className="modal__title"> {title} </h2>
         <button

@@ -116,6 +116,7 @@ function App() {
                 <Profile
                   handleCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
@@ -124,7 +125,7 @@ function App() {
         </div>
         <AddItemModal
           onClose={closeAllModals}
-          isOpen={activeModal === "add-garment" && "modal_opened"}
+          isOpen={activeModal === "add-garment"}
           onAddItem={onAddItem}
         />
         <ItemModal

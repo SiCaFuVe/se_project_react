@@ -83,7 +83,7 @@
   flex-direction: column;
 }
 
-.modal__radio-buttons:checked {
+.modal__radio-input:checked + label {
   color: black;
 }
 
