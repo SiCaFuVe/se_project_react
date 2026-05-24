@@ -18,28 +18,38 @@
 }
 
 .modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   font-size: 20px;
   font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
-  padding-left: 20px;
+  padding: 16px 20px;
   background-color: white;
 }
 
+.modal__info {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal__caption {
-  margin-top: 10px;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
 
 .modal__weather {
-  margin: 15px 0;
+  margin: 6px 0 0;
   font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
 .modal__delete {
   color: rgba(255, 77, 0, 1);
-  font-family: "CabonetGrotesk-Medium", Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
+  font-size: 20px;
   border: none;
   background: none;
-  margin-left: auto;
+  cursor: pointer;
 }
