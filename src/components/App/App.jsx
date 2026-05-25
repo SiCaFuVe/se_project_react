@@ -57,7 +57,7 @@ function App() {
       weather: inputValues.weatherType,
     };
 
-    addItem(newCardData)
+    return addItem(newCardData)
       .then((data) => {
         setClothingItems([data, ...clothingItems]);
         closeAllModals();
