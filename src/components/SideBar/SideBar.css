@@ -1,3 +1,10 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
 .sidebar__user-container {
   display: flex;
   flex-direction: row-reverse;
@@ -19,4 +26,22 @@
   border-radius: 50%;
   object-fit: cover;
   display: block;
+}
+
+.sidebar__avatar_none {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(243, 243, 243, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.sidebar__edit-button,
+.sidebar__signout-button {
+  border: none;
+  background: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  font-family: "CabinetGrotesk-Medium", Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }

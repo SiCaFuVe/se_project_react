@@ -53,3 +53,7 @@
   background: none;
   cursor: pointer;
 }
+
+.modal__delete_hidden {
+  display: none;
+}

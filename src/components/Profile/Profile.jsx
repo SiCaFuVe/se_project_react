@@ -1,15 +1,30 @@
+import { useContext } from "react";
+
 import "./Profile.css";
 import ClothesSection from "../ClothesSection/ClothesSection";
 import SideBar from "../SideBar/SideBar";
-import avatarDefault from "../../assets/avatarDefault.png";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-export default function Profile({ clothingItems, handleCardClick }) {
+export default function Profile({
+  clothingItems,
+  handleCardClick,
+  onCardLike,
+  onEditProfileClick,
+  onSignOut,
+}) {
+  const { currentUser } = useContext(CurrentUserContext);
+
+  const userClothingItems = clothingItems.filter(
+    (item) => item.owner === currentUser?._id,
+  );
+
   return (
     <section className="profile">
-      <SideBar />
+      <SideBar onEditProfileClick={onEditProfileClick} onSignOut={onSignOut} />
       <ClothesSection
         handleCardClick={handleCardClick}
-        clothingItems={clothingItems}
+        clothingItems={userClothingItems}
+        onCardLike={onCardLike}
       />
     </section>
   );
