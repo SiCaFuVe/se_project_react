@@ -5,7 +5,6 @@ function ModalWithForm({
   title,
   name,
   buttonText = "Save",
-  activeModal,
   isOpen,
   onClose,
   onSubmit,

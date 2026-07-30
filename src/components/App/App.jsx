@@ -28,6 +28,8 @@ import {
 } from "../../utils/api";
 
 function App() {
+  const getStoredToken = () => localStorage.getItem("jwt") || "";
+
   const [weatherData, setWeatherData] = useState({
     type: "",
     temp: { F: 999, C: 999 },
@@ -196,7 +198,7 @@ function App() {
 
     return request
       .then((updatedCardData) => {
-        const updatedCard = updatedCardData.data;
+        const updatedCard = updatedCardData.data || updatedCardData;
 
         setClothingItems((cards) =>
           cards.map((item) => (item._id === id ? updatedCard : item)),
@@ -226,7 +228,6 @@ function App() {
               weatherData={weatherData}
               onRegisterClick={handleRegisterClick}
               onLoginClick={handleLoginClick}
-              currentUser={currentUser}
               isLoggedIn={isLoggedIn}
             />
             <Routes>

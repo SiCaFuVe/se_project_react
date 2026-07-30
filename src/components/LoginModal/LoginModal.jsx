@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useFormWithValidation } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
@@ -23,14 +24,22 @@ const LoginModal = ({ isOpen, onLogin, onClose }) => {
 
   const { values, handleChange, handleSubmit, errors, resetForm } =
     useFormWithValidation(defaultValues, validationRules);
+  const [submitError, setSubmitError] = useState("");
 
   function handleSubmitForm(evt) {
     evt.preventDefault();
+    setSubmitError("");
+
     if (!handleSubmit()) return;
 
-    onLogin(values).then(() => {
-      resetForm();
-    });
+    onLogin(values)
+      .then(() => {
+        resetForm();
+        onClose();
+      })
+      .catch(() => {
+        setSubmitError("Invalid email or password. Please try again.");
+      });
   }
 
   return (
@@ -71,6 +80,7 @@ const LoginModal = ({ isOpen, onLogin, onClose }) => {
         />
         <span className="modal__error">{errors.password}</span>
       </label>
+      {submitError && <span className="modal__error">{submitError}</span>}
     </ModalWithForm>
   );
 };

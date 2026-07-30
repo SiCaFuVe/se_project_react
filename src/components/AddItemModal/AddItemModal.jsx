@@ -48,7 +48,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       onClose={onClose}
       onSubmit={handleSubmitForm}
     >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="clothing-name" className="modal__label">
         Name{" "}
         <input
           type="text"
@@ -66,7 +66,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
           {errors.name}
         </span>
       </label>
-      <label htmlFor="imageUrl" className="modal__label">
+      <label htmlFor="clothing-imageUrl" className="modal__label">
         Image{" "}
         <input
           type="url"
