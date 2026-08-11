@@ -13,6 +13,9 @@ function ConfirmationModal({ isOpen, card, onConfirm, onCancel }) {
         <p className="confirmation-modal__message">
           Are you sure you want to delete <strong>{card.name}</strong>?
         </p>
+        <p className="confirmation-modal__message">
+          This action is irreversible.
+        </p>
         <div className="confirmation-modal__actions">
           <button
             type="button"

@@ -1,8 +1,13 @@
-import handleServerResponse from "./api";
-
 const baseUrl = "http://localhost:3001";
 
 const headers = { "Content-Type": "application/json" };
+
+export const handleServerResponse = (response) => {
+  if (!response.ok) {
+    return Promise.reject(new Error(`Error: ${response.status}`));
+  }
+  return response.json();
+};
 
 const getAuthHeaders = (token) => {
   return token

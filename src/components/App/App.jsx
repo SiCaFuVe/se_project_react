@@ -19,6 +19,7 @@ import currentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnit
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import { signUp, signIn, getCurrentUser } from "../../utils/auth";
 import {
+  handleServerResponse,
   getItems,
   addItem,
   removeItem,

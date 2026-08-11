@@ -1,5 +1,6 @@
 .confirmation-modal__content {
   max-width: 670px;
+  max-height: 280px;
   padding: 32px 28px 28px;
 }
 

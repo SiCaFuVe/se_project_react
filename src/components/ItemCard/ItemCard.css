@@ -8,19 +8,15 @@
 
 .card__like-button {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 8px;
+  right: 45px;
   border: none;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 40px;
   height: 40px;
-  font-size: 20px;
   cursor: pointer;
-}
-
-.card__like-button_active {
-  color: rgba(255, 77, 0, 1);
 }
 
 .card__name {

@@ -22,5 +22,4 @@ We created an App that tracks the weather and provides images of the clothing ne
 
 ## Project Pitch Backend sprint 14
 
-Check out [https://www.loom.com/share/3c07455fd6e34fdfa698f0672e0087de], where I describe my
-project and some challenges I faced while building it.
+Check out [https://www.loom.com/share/3c07455fd6e34fdfa698f0672e0087de], where I describe my project and some challenges I faced while building it.

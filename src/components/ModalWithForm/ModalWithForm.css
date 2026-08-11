@@ -101,4 +101,7 @@
   padding: 8px 16px;
   gap: 8px;
   cursor: pointer;
+  hover:enabled {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 }

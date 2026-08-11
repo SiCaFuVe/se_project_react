@@ -25,7 +25,7 @@ export default function SideBar({ onEditProfileClick, onSignOut }) {
         className="sidebar__edit-button"
         onClick={onEditProfileClick}
       >
-        Edit profile
+        Change profile data
       </button>
       <button
         type="button"

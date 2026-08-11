@@ -6,6 +6,7 @@ import SideBar from "../SideBar/SideBar";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 export default function Profile({
+  handleAddClick,
   clothingItems,
   handleCardClick,
   onCardLike,
@@ -25,6 +26,7 @@ export default function Profile({
         handleCardClick={handleCardClick}
         clothingItems={userClothingItems}
         onCardLike={onCardLike}
+        onClickAdd={handleAddClick}
       />
     </section>
   );
