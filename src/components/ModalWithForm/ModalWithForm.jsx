@@ -8,13 +8,19 @@ function ModalWithForm({
   isOpen,
   onClose,
   onSubmit,
+  onAfterClose,
 }) {
+  function handleClose() {
+    if (typeof onAfterClose === "function") onAfterClose();
+    if (typeof onClose === "function") onClose();
+  }
+
   return (
     <div className={`modal modal_type_${name} ${isOpen ? "modal_opened" : ""}`}>
       <div className="modal__content">
         <h2 className="modal__title"> {title} </h2>
         <button
-          onClick={onClose}
+          onClick={handleClose}
           type="button"
           className="modal__close"
         ></button>

@@ -46,6 +46,7 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       name="new-card"
       isOpen={isOpen}
       onClose={onClose}
+      onAfterClose={resetForm}
       onSubmit={handleSubmitForm}
     >
       <label htmlFor="clothing-name" className="modal__label">

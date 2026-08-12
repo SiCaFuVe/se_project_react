@@ -49,6 +49,10 @@ const LoginModal = ({ isOpen, onLogin, onClose }) => {
       buttonText="Log in"
       isOpen={isOpen}
       onClose={onClose}
+      onAfterClose={() => {
+        resetForm();
+        setSubmitError("");
+      }}
       onSubmit={handleSubmitForm}
     >
       <label htmlFor="login-email" className="modal__label">

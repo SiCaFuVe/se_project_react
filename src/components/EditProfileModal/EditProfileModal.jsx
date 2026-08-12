@@ -23,6 +23,18 @@ const EditProfileModal = ({
     }
   }, [currentUser, isOpen]);
 
+  function resetToUser() {
+    if (currentUser) {
+      setValues({
+        name: currentUser.name || "",
+        avatar: currentUser.avatar || "",
+      });
+    } else {
+      setValues({ name: "", avatar: "" });
+    }
+    setErrors({});
+  }
+
   const validateForm = (formValues) => {
     const nextErrors = {};
 
@@ -76,6 +88,7 @@ const EditProfileModal = ({
       buttonText="Save changes"
       isOpen={isOpen}
       onClose={onClose}
+      onAfterClose={resetToUser}
       onSubmit={handleSubmitForm}
     >
       <label htmlFor="edit-profile-name" className="modal__label">
