@@ -5,6 +5,9 @@ function ModalWithForm({
   title,
   name,
   buttonText = "Save",
+  isValid = true,
+  secondaryButtonText,
+  onSecondaryButtonClick,
   isOpen,
   onClose,
   onSubmit,
@@ -26,9 +29,24 @@ function ModalWithForm({
         ></button>
         <form className="modal__form" onSubmit={onSubmit} name={name}>
           {children}
-          <button type="submit" className="button modal__submit">
-            {buttonText}
-          </button>
+          <div className="modal__actions">
+            <button
+              type="submit"
+              className={`button modal__submit ${isValid ? "modal__submit_valid" : ""}`}
+              disabled={!isValid}
+            >
+              {buttonText}
+            </button>
+            {secondaryButtonText && (
+              <button
+                type="button"
+                className="modal__secondary-button"
+                onClick={onSecondaryButtonClick}
+              >
+                {secondaryButtonText}
+              </button>
+            )}
+          </div>
         </form>
       </div>
     </div>

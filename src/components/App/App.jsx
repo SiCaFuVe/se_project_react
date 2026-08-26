@@ -65,6 +65,14 @@ function App() {
     setActiveModal("login");
   };
 
+  const handleSwitchToRegister = () => {
+    setActiveModal("register");
+  };
+
+  const handleSwitchToLogin = () => {
+    setActiveModal("login");
+  };
+
   const handleEditProfileClick = () => {
     setActiveModal("edit-profile");
   };
@@ -137,20 +145,18 @@ function App() {
   };
 
   const onLogin = (inputValues) => {
-    return signIn(inputValues)
-      .then((res) => {
-        if (res.token) {
-          localStorage.setItem("jwt", res.token);
-          setToken(res.token);
-          setIsLoggedIn(true);
-        }
+    return signIn(inputValues).then((res) => {
+      if (res.token) {
+        localStorage.setItem("jwt", res.token);
+        setToken(res.token);
+        setIsLoggedIn(true);
+      }
 
-        return getCurrentUser(res.token).then((userData) => {
-          setCurrentUser(userData.data);
-          closeAllModals();
-        });
-      })
-      .catch(console.error);
+      return getCurrentUser(res.token).then((userData) => {
+        setCurrentUser(userData.data);
+        closeAllModals();
+      });
+    });
   };
 
   useEffect(() => {
@@ -265,11 +271,13 @@ function App() {
             onClose={closeAllModals}
             isOpen={activeModal === "register"}
             onRegister={onRegister}
+            onSwitchToLogin={handleSwitchToLogin}
           />
           <LoginModal
             onClose={closeAllModals}
             isOpen={activeModal === "login"}
             onLogin={onLogin}
+            onSwitchToRegister={handleSwitchToRegister}
           />
           <AddItemModal
             onClose={closeAllModals}

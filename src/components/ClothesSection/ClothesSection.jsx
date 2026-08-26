@@ -1,11 +1,11 @@
 import "./ClothesSection.css";
 import ItemCard from "../ItemCard/ItemCard";
-import handleAddClick from "../App/App";
 
 export default function ClothesSection({
   clothingItems,
   handleCardClick,
   onCardLike,
+  onClickAdd,
 }) {
   return (
     <div className="clothes-section">
@@ -14,7 +14,7 @@ export default function ClothesSection({
         <button
           type="button"
           className="clothes-section__add-button"
-          onClick={handleAddClick}
+          onClick={onClickAdd}
         >
           {" "}
           + Add new{" "}

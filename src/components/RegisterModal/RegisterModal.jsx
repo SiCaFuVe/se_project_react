@@ -1,7 +1,7 @@
 import { useFormWithValidation } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const RegisterModal = ({ isOpen, onRegister, onClose }) => {
+const RegisterModal = ({ isOpen, onRegister, onClose, onSwitchToLogin }) => {
   const defaultValues = {
     name: "",
     avatar: "",
@@ -39,7 +39,7 @@ const RegisterModal = ({ isOpen, onRegister, onClose }) => {
     },
   };
 
-  const { values, handleChange, handleSubmit, errors, resetForm } =
+  const { values, handleChange, handleSubmit, errors, isValid, resetForm } =
     useFormWithValidation(defaultValues, validationRules);
 
   function handleSubmitForm(evt) {
@@ -56,6 +56,9 @@ const RegisterModal = ({ isOpen, onRegister, onClose }) => {
       title="Sign up"
       name="register"
       buttonText="Sign up"
+      isValid={isValid}
+      secondaryButtonText="or Log In"
+      onSecondaryButtonClick={onSwitchToLogin}
       isOpen={isOpen}
       onClose={onClose}
       onAfterClose={resetForm}

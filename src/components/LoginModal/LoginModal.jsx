@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useFormWithValidation } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const LoginModal = ({ isOpen, onLogin, onClose }) => {
+const LoginModal = ({ isOpen, onLogin, onClose, onSwitchToRegister }) => {
   const defaultValues = {
     email: "",
     password: "",
@@ -22,7 +22,7 @@ const LoginModal = ({ isOpen, onLogin, onClose }) => {
     },
   };
 
-  const { values, handleChange, handleSubmit, errors, resetForm } =
+  const { values, handleChange, handleSubmit, errors, isValid, resetForm } =
     useFormWithValidation(defaultValues, validationRules);
   const [submitError, setSubmitError] = useState("");
 
@@ -47,6 +47,9 @@ const LoginModal = ({ isOpen, onLogin, onClose }) => {
       title="Log in"
       name="login"
       buttonText="Log in"
+      isValid={isValid}
+      secondaryButtonText="or Sign Up"
+      onSecondaryButtonClick={onSwitchToRegister}
       isOpen={isOpen}
       onClose={onClose}
       onAfterClose={() => {
