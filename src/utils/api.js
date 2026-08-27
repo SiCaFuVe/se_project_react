@@ -1,6 +1,6 @@
-const baseUrl = "http://localhost:3001";
+export const baseUrl = "http://localhost:3001";
 
-const headers = { "Content-Type": "application/json" };
+export const headers = { "Content-Type": "application/json" };
 
 export const handleServerResponse = (response) => {
   if (!response.ok) {

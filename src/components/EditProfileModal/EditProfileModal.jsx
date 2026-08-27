@@ -1,13 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
-const EditProfileModal = ({
-  isOpen,
-  onClose,
-  onUpdateProfile,
-  currentUser,
-}) => {
+const EditProfileModal = ({ isOpen, onClose, onUpdateProfile }) => {
+  const { currentUser } = useContext(CurrentUserContext);
   const [values, setValues] = useState({
     name: "",
     avatar: "",

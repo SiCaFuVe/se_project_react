@@ -1,15 +1,7 @@
-const baseUrl = "http://localhost:3001";
-
-const headers = { "Content-Type": "application/json" };
-
-export const handleServerResponse = (res) => {
-  return res.ok
-    ? res.json()
-    : Promise.reject(new Error(`Error: ${res.status}`));
-};
+import { baseUrl, headers, handleServerResponse } from "./api";
 
 const getAuthHeaders = (token) => ({
-  "Content-Type": "application/json",
+  ...headers,
   authorization: `Bearer ${token}`,
 });
 
