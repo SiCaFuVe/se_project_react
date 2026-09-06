@@ -27,6 +27,7 @@ import {
   addCardLike,
   removeCardLike,
 } from "../../utils/api";
+// import errorHandler from "../../errorHandler";
 
 function App() {
   const getStoredToken = () => localStorage.getItem("jwt") || "";
