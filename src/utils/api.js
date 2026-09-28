@@ -1,6 +1,6 @@
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://www.gpt-demo.ignorelist.com"
+    ? "https://api.gpt-demo.ignorelist.com"
     : "http://localhost:3001";
 
 export const headers = { "Content-Type": "application/json" };
